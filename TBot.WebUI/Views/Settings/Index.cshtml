@@ -4,6 +4,8 @@
         crossorigin="anonymous"></script>
 
 <script src="~/js/jquery.json-editor.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/10.3.0/jsoneditor.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/10.3.0/jsoneditor.min.js"></script>
 <link rel="stylesheet" href="~/css/settings.css" asp-append-version="true" />
 <script src="~/js/settings.js" asp-append-version="true"></script>
 
@@ -20,7 +22,12 @@
         <div class="buttons-box">
             <button class="btn btn-light" onclick="saveFileContents()">💾 Save</button>
             <button class="btn btn-light" onclick="onReloadClick()">🔃 Reload current file</button>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="editor-toggle" onchange="toggleEditor()">
+                <label class="form-check-label" for="editor-toggle">Enhanced Editor</label>
+            </div>
         </div>
+        <div id="jsoneditor" style="height: 500px;"></div>
         <pre id="json-display"></pre>
     </div>
 </div>
