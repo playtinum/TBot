@@ -49,3 +49,46 @@ body {
 	background-color: rgb(0,0,0,0.2);
 	display: none;
 }
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    line-height: 20px;
+}
+
+.log-viewer {
+    background-color: #333;
+    color: #fff;
+    font-family: monospace;
+}
+
+.log-header {
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.latest-log {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.log-content {
+    display: none;
+    height: 200px;
+    overflow-y: scroll;
+    padding: 5px;
+    background-color: #222;
+}
+
+.log-entry {
+    padding: 2px 0;
+}
+
+.log-viewer.expanded {
+    height: 220px;
+}
